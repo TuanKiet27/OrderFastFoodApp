@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OrderController" prefWidth="1000" prefHeight="600">
+   <children>
+      <!-- Sidebar -->
+      <VBox layoutX="0" layoutY="0" prefWidth="200" prefHeight="600" style="-fx-background-color: #2e8540;">
+         <children>
+            <Label text="Cafe Shop Management System" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 10;" />
+            <Label text="Welcome, Admin111" style="-fx-text-fill: white; -fx-padding: 5 0 10 10;" />
+            <Button text="Dashboard" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-padding: 10;" />
+            <Button text="Inventory" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-padding: 10;" />
+            <Button text="Menu" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-padding: 10;" />
+            <Button text="Customers" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-padding: 10;" />
+            <Button text="Sign Out" style="-fx-background-color: red; -fx-text-fill: white; -fx-padding: 10; -fx-margin-top: auto;" />
+         </children>
+      </VBox>
+
+      <!-- Main Content -->
+      <VBox layoutX="200" layoutY="0" prefWidth="800" prefHeight="600" style="-fx-padding: 10;">
+         <children>
+            <Label text="Menu" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+            <ScrollPane fitToWidth="true">
+               <content>
+                  <FlowPane hgap="10" vgap="10">
+                     <children>
+                        <!-- Product Card -->
+                        <VBox spacing="5" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10; -fx-background-color: white;">
+                           <children>
+                              <!-- Add Image here -->
+                             <ImageView fx:id="Burger" url="@/images/burgerImage.jpg"/>
+                              <Label text="Burger" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                              <Label text="$1.0" style="-fx-font-size: 12px;" />
+                              <HBox spacing="5">
+                                 <Spinner prefWidth="50" />
+                                 <Button text="Add" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+                              </HBox>
+                           </children>
+                        </VBox>
+
+                        <!-- Copy Product Card as needed -->
+                        <VBox spacing="5" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10; -fx-background-color: white;">
+                           <children>
+                              <!-- Add Image here -->
+                              <ImageView fx:id="Spaghetti" url="@/images/spaghettiImage.jpg"/>
+                              <Label text="Spaghetti" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                              <Label text="$2.0" style="-fx-font-size: 12px;" />
+                              <HBox spacing="5">
+                                 <Spinner prefWidth="50" />
+                                 <Button text="Add" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+                              </HBox>
+                           </children>
+                        </VBox>
+
+                        <!-- Repeat for more products -->
+                     </children>
+                  </FlowPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+
+      <!-- Right Pane (Cart) -->
+      <VBox layoutX="800" layoutY="0" prefWidth="200" prefHeight="600" style="-fx-border-color: lightgray; -fx-padding: 10;">
+         <children>
+            <Label text="Cart" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+            <TableView>
+               <columns>
+                  <TableColumn text="Product Name" />
+                  <TableColumn text="Quantity" />
+                  <TableColumn text="Price ($)" />
+               </columns>
+            </TableView>
+            <Label text="Total: $0.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+            <TextField promptText="Amount" />
+            <Label text="Change: $0.0" style="-fx-font-size: 14px;" />
+            <Button text="Pay" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+            <Button text="Remove" style="-fx-background-color: red; -fx-text-fill: white;" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

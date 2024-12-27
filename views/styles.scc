@@ -1,0 +1,40 @@
+.root-pane {
+    -fx-background-color: #FFA500; /* Màu nền cam */
+    -fx-padding: 50;
+}
+
+.login-container {
+    -fx-background-color: #2F4F4F; /* Màu xanh đậm cho container */
+    -fx-padding: 20;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.login-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 20 0 10 0;
+}
+
+.input-field {
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 14px;
+    -fx-border-color: #CCCCCC;
+}
+
+.login-button {
+    -fx-background-color: #008080; /* Màu xanh teal */
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #006666; /* Màu xanh đậm hơn khi hover */
+}

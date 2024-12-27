@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegisterController">
+    <!-- Phần bên trái -->
+    <AnchorPane prefWidth="300" style="-fx-background-color: linear-gradient(#FF5722, #FF8A50);">
+        <VBox alignment="CENTER" layoutX="50" layoutY="80" spacing="20">
+            <!-- Logo đồ ăn nhanh -->
+            <ImageView fitHeight="100" fitWidth="100">
+               <Image url="@../images/fastfood.png" />
+            </ImageView>
+            <Label style="-fx-font-size: 24px; -fx-text-fill: white; -fx-font-weight: bold;" text="FastFood" />
+            <Button onAction="#handleBackToLogin" style="-fx-background-color: white; -fx-text-fill: #FF5722; -fx-font-size: 14px;" text="Already have an account?" />
+        </VBox>
+    </AnchorPane>
+
+    <!-- Phần bên phải -->
+    <AnchorPane prefWidth="300" style="-fx-background-color: #FFFFFF;">
+        <VBox alignment="CENTER" layoutX="50" layoutY="50" spacing="15" style="-fx-padding: 20;">
+            <Label style="-fx-font-size: 20px; -fx-text-fill: #FF5722;" text="Register Account" />
+<TextField fx:id="newUsernameField" prefWidth="250" promptText="Enter your username" />
+<PasswordField fx:id="newPasswordField" prefWidth="250" promptText="Enter your password" />
+            <Button onAction="#handleSubmit" style="-fx-background-color: linear-gradient(#FF5722, #FF8A50); -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;" text="Register" />
+        </VBox>
+    </AnchorPane>
+</HBox>
